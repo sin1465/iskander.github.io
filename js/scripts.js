@@ -55,5 +55,11 @@ window.addEventListener('DOMContentLoaded', event => {
     new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
-
 });
+
+function scrollGallery(galleryId, scrollAmount) {
+    document.querySelector('#' + galleryId + ' .gallery').scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+}
