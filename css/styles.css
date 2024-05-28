@@ -10994,25 +10994,25 @@ header.masthead h1, header.masthead .h1 {
   opacity: 1;
 }
 
-
 .gallery-container {
   position: relative;
-  width: 80%;
-  overflow: hidden;
-  margin: auto;
+  display: flex; /* Establishes this container as a flex container */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Sets the container's height to fill the viewport */
 }
 
 .gallery {
   display: flex;
+  align-items: center; /* Centers items vertically */
   overflow-x: scroll;
   scroll-behavior: smooth;
   white-space: nowrap;
 }
 
-.gallery img {
-  width: 350px;        /* Set a fixed width for all images */
-  height: 500px;       /* Set a fixed height for all images */
-  object-fit: contain;  /* This will ensure that the entire image fits within the area */
+.gallery img, .gallery video {
+  max-height: 70vh; /* Example of using viewport height for responsive design */
+  object-fit: contain;
   padding: 10px;
 }
 
@@ -11023,12 +11023,13 @@ header.masthead h1, header.masthead .h1 {
   cursor: pointer;
   background-color: #fff;
   border: none;
+  z-index: 10;
 }
 
 .left-arrow {
-  left: 0;
+  left: 15px;
 }
 
 .right-arrow {
-  right: 0;
+  right: 15px;
 }
